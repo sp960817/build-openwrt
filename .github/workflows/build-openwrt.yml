@@ -321,7 +321,7 @@ jobs:
         artifacts: "${{ env.FIRMWARE }}/*"
     
     - name: 微信通知
-     run: |
+        run: |
         if [[ "${BOT}" == "TRUE" ]]; then
           if [[ "${SERVERCHAN_SCKEY}" == "true" ]]; then
             curl -k --data chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" --data "text=我亲爱的✨主人✨：
